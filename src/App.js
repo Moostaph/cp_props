@@ -1,25 +1,22 @@
-import logo from './logo.svg';
+import Profile from "./profile/component/Profile";
+import ImageProfile from "./profile/component/ImageProfile";
 import './App.css';
+const styleProfile = {textAlign: 'center', size:150};
+const styleInfo={textAlign:"center", fontSize:12, color:"red"};
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+const App = () => (
+    <div> 
+    <div style = {styleProfile} >
+    <ImageProfile/>
+    </div>     
+    
+    <div style={styleInfo}>
+     <Profile FullName="Mouhamadou Moustapha Mbaye"
+              Bio="Administrateur réseaux et systèmes souhaitant se reconvertir en Web Dev"
+              Profession="Informaticien"/>;
     </div>
-  );
-}
-
-export default App;
+  </div>
+  
+ );
+ export default App;
